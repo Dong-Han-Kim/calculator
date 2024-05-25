@@ -75,7 +75,6 @@ function onClickBtn(event) {
 					operators += btnContent;
 					result.value += btnContent;
 					onOperator = true;
-					onDecimal = false;
 					console.log(`-operators ${operators}`);
 				} else if (operators && !numTwo) {
 					numTwo += btnContent;
@@ -88,11 +87,11 @@ function onClickBtn(event) {
 					result.value += btnContent;
 					console.log(`operators ${operators}`);
 					onOperator = true;
+					onDecimal = false;
 				} else if (onOperator) {
 					return;
 				}
 			}
-			onDecimal = false;
 		}
 
 		if (action === 'decimal') {
@@ -101,23 +100,27 @@ function onClickBtn(event) {
 				numTwo = '';
 				operators = '';
 				result.value = '';
+				onDecimal = false;
 				resultAfterNumber = false;
 				return;
 			}
-			console.log(onDecimal);
-			// 중복제거
 			if (!onDecimal) {
-				// 입력
 				if (!operators) {
-					numOne += btnContent;
-					result.value += btnContent;
+					if (numOne !== '') {
+						numOne += btnContent;
+						result.value += btnContent;
+						onDecimal = true;
+					}
 					console.log(onDecimal);
 				} else {
-					numTwo += btnContent;
-					result.value += btnContent;
+					if (numTwo !== '') {
+						numTwo += btnContent;
+						result.value += btnContent;
+						onDecimal = true;
+					}
 				}
 			}
-			onDecimal = true;
+			console.log(onDecimal);
 		}
 
 		if (action === 'clear') {

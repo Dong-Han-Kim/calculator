@@ -1,57 +1,57 @@
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-h1{
-  text-align: center;
-  margin: 50px auto;
+h1 {
+	text-align: center;
+	margin: 50px auto;
 }
 
 #calculator {
-  width: 300px;
-  border: 3px solid lightgray;
-  border-radius: 2%;
-  background-color: black;
-  text-align: center;
-  margin: auto;
-  padding: 10px;
+	width: 300px;
+	border: 3px solid lightgray;
+	border-radius: 2%;
+	background-color: black;
+	text-align: center;
+	margin: auto;
+	padding: 10px;
 }
 
 #result {
-  width: 245px;
-  height: 50px;
-  margin: 5px;
-  text-align: right;
+	width: 245px;
+	height: 50px;
+	margin: 5px;
+	text-align: right;
 }
 
 .operator {
-  width: 50px;
-  height: 50px;
-  margin: 5px;
-  text-align: center;
-  background-color: #ff9900;
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+	text-align: center;
+	background-color: #ff9900;
+}
+
+.buttons {
+	font-weight: bolder;
 }
 
 button {
-  width: 50px;
-  height: 50px;
-  margin: 5px;
-  border: none;
-  align-items: center;
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+	border: none;
+	align-items: center;
 }
 
 .calculate,
 .clear {
-  width: 115px;
-  height: 50px;
-  background-color: #9c9a9a;
+	width: 115px;
+	height: 50px;
+	background-color: #9c9a9a;
 }
 
-.num-0{
-  width: 115px;
-  height: 50px;
-}
-
-#decimal {
-  font-weight: 900;
+.num-0 {
+	width: 115px;
+	height: 50px;
 }
